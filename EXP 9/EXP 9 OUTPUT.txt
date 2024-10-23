@@ -1,0 +1,73 @@
+1. Insert
+2. In-order Traversal
+3. Pre-order Traversal
+4. Post-order Traversal
+5. Search
+6.Delete
+7. Exit 
+Enter your choice:1
+Enter value to insert: 24
+1. Insert
+2. In-order Traversal
+3. Pre-order Traversal
+4. Post-order Traversal
+5. Search
+6.Delete
+7. Exit 
+Enter your choice:1
+Enter value to insert: 100
+1. Insert
+2. In-order Traversal
+3. Pre-order Traversal
+4. Post-order Traversal
+5. Search
+6.Delete
+7. Exit 
+Enter your choice:1
+Enter value to insert: 32
+1. Insert
+2. In-order Traversal
+3. Pre-order Traversal
+4. Post-order Traversal
+5. Search
+6.Delete
+7. Exit 
+Enter your choice:2
+In-order Traversal: 24 32 100 
+1. Insert
+2. In-order Traversal
+3. Pre-order Traversal
+4. Post-order Traversal
+5. Search
+6.Delete
+7. Exit 
+Enter your choice:3
+Pre-order Traversal: 24 100 32 
+1. Insert
+2. In-order Traversal
+3. Pre-order Traversal
+4. Post-order Traversal
+5. Search
+6.Delete
+7. Exit 
+Enter your choice:4
+Post-order Traversal: 32 100 24 
+1. Insert
+2. In-order Traversal
+3. Pre-order Traversal
+4. Post-order Traversal
+5. Search
+6.Delete
+7. Exit 
+Enter your choice:5
+Enter value to search: 32
+Node found.
+1. Insert
+2. In-order Traversal
+3. Pre-order Traversal
+4. Post-order Traversal
+5. Search
+6.Delete
+7. Exit 
+Enter your choice:6
+Enter value to delete: 100

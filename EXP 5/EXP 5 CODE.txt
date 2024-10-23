@@ -1,0 +1,213 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct node {
+    int data;
+    struct node *next;
+};
+struct node *createsll() {
+    struct node *head = NULL;
+    struct node *temp = NULL;
+    struct node *newnode = NULL;
+    int x;
+    char ans;
+    do {
+        printf("Enter data for node: ");
+        scanf("%d", &x);
+        newnode = (struct node *)malloc(sizeof(struct node));
+        newnode->data = x;
+        newnode->next = NULL;
+        if (head == NULL) {
+            head = temp = newnode;
+        } else {
+            temp->next = newnode;
+            temp = newnode;
+        }
+        printf("Do you want to add more nodes? (y/n): ");
+        scanf(" %c", &ans);
+    } while (ans == 'y');
+    return head;
+}
+void display(struct node *head) {
+    struct node *temp = head;
+    if (temp == NULL) {
+        printf("List is empty\n");
+    } else {
+        while (temp != NULL) {
+            printf("%d -> ", temp->data);
+            temp = temp->next;
+        }
+        printf("NULL\n");
+    }
+}
+struct node *insertatbeginning(struct node *head) {
+    struct node *newnode = (struct node *)malloc(sizeof(struct node));
+    int x;
+    printf("Enter data for node: ");
+    scanf("%d", &x);
+    newnode->data = x;
+    newnode->next = head;
+    head = newnode;
+    return head;
+}
+struct node *insertinmiddle(struct node *head, int loc) {
+    struct node *newnode = (struct node *)malloc(sizeof(struct node));
+    struct node *temp = head;
+    int x, i = 1;
+    printf("Enter data for node: ");
+    scanf("%d", &x);
+    newnode->data = x;
+    if (loc == 1) {
+        newnode->next = head;
+        head = newnode;
+    } else {
+        while (i < loc - 1 && temp != NULL) {
+            temp = temp->next;
+            i++;
+        }
+        if (temp == NULL) {
+            printf("Location out of bounds\n");
+            free(newnode);
+            return head;
+        }
+        newnode->next = temp->next;
+        temp->next = newnode;
+    }
+
+    return head;
+}
+struct node *insertatend(struct node *head) {
+    struct node *newnode = (struct node *)malloc(sizeof(struct node));
+    struct node *temp = head;
+    int x;
+    printf("Enter data for node: ");
+    scanf("%d", &x);
+    newnode->data = x;
+    newnode->next = NULL;
+    if (head == NULL) {
+        head = newnode;
+    } else {
+        while (temp->next != NULL) {
+            temp = temp->next;
+        }
+        temp->next = newnode;
+    }
+    return head;
+}
+struct node *deletefirstnode(struct node *head) {
+    struct node *dnode;
+    if (head == NULL) {
+        printf("List is empty\n");
+        return NULL;
+    }
+    dnode = head;
+    head = head->next;
+    free(dnode);
+    return head;
+}
+struct node *deletemiddlenode(struct node *head, int loc) {
+    struct node *temp = head;
+    struct node *dnode;
+    int i = 1;
+    if (head == NULL) {
+        printf("List is empty\n");
+        return NULL;
+    }
+    if (loc == 1) {
+        head = head->next;
+        free(temp);
+        return head;
+    }
+    while (i < loc - 1 && temp != NULL) {
+        temp = temp->next;
+        i++;
+    }
+    if (temp == NULL || temp->next == NULL) {
+        printf("Location out of bounds\n");
+        return head;
+    }
+    dnode = temp->next;
+    temp->next = dnode->next;
+    free(dnode);
+    return head;
+}
+struct node *deletelastnode(struct node *head) {
+    struct node *temp = head;
+    struct node *dnode = NULL;
+    if (head == NULL) {
+        printf("List is empty\n");
+        return NULL;
+    }
+    if (head->next == NULL) {
+        free(head);
+        return NULL;
+    }
+    while (temp->next->next != NULL) {
+        temp = temp->next;
+    }
+    dnode = temp->next;
+    temp->next = NULL;
+    free(dnode);
+    return head;
+}
+struct node *displayreverse(struct node *head) {
+    struct node *prevnode = NULL;
+    struct node *currentnode = head;
+    struct node *nextnode = NULL;
+    while (currentnode != NULL) {
+        nextnode = currentnode->next;
+        currentnode->next = prevnode;
+        prevnode = currentnode;
+        currentnode = nextnode;
+    }
+    head = prevnode;
+    display(head);
+    return head;
+}
+
+int main() {
+    struct node *head = NULL;
+    int choice, loc;
+    while (1) {
+        printf("1. Create list\n2. Display list\n3. Insert at beginning\n4. Insert in middle\n5. Insert at end\n6. Delete from beginning\n7. Delete from middle\n8. Delete from end\n9. Reverse list\n10. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:
+                head = createsll();
+                break;
+            case 2:
+                display(head);
+                break;
+            case 3:
+                head = insertatbeginning(head);
+                break;
+            case 4:
+                printf("Enter location to insert: ");
+           scanf("%d", &loc);
+                head = insertinmiddle(head, loc);
+                break;
+            case 5:
+                head = insertatend(head);
+                break;
+            case 6:
+                head = deletefirstnode(head);
+                break;
+            case 7:
+                printf("Enter location to delete: ");
+                scanf("%d", &loc);
+                head = deletemiddlenode(head, loc);
+                break;
+            case 8:
+                head = deletelastnode(head);
+                break;
+            case 9:
+                head = displayreverse(head);
+                break;
+            case 10:
+                exit(0);
+            default:
+                printf("Invalid choice\n");
+        }
+    }
+    return 0;
+} 

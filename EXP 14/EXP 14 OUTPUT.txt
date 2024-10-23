@@ -1,0 +1,19 @@
+Enter the number of elements in the array: 4
+Enter the elements of the array: 22
+39
+65
+11
+
+Menu:
+1. Merge Sort
+2. Quick Sort
+3. Exit
+Enter your choice: 1
+Array after Merge Sort: 11 22 39 65
+
+Menu:
+1. Merge Sort
+2. Quick Sort
+3. Exit
+Enter your choice: 2
+Array after Quick Sort: 11 22 39 65

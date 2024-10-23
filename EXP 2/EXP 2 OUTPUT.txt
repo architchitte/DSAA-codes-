@@ -1,0 +1,3 @@
+Enter infix expression:
+3+5*2/(1-5)
+Postfix expression is 352*15-/+

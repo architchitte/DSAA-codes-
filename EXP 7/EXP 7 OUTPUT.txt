@@ -1,0 +1,98 @@
+1. Create circular linked list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Exit
+Enter your choice: 1
+Enter data to node: 20
+Do you want to add more nodes? (y/n): y
+Enter data to node: 22
+Do you want to add more nodes? (y/n): y
+Enter data to node: 24
+Do you want to add more nodes? (y/n): n
+
+1. Create circular linked list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Exit
+Enter your choice: 2
+20 -> 22 -> 24 -> HEAD
+
+1. Create circular linked list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Exit
+Enter your choice: 3
+Enter data for node: 18
+1. Create circular linked list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Exit
+Enter your choice: 4
+Enter location to insert: 1
+Enter data for node: 22
+Enter data for node: 22
+
+1. Create circular linked list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Exit
+Enter your choice: 5
+Enter data for node: 24
+
+1. Create circular linked list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Exit
+Enter your choice: 6
+1. Create circular linked list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Exit
+Enter your choice: 7
+Enter location to delete: 2
+
+1. Create circular linked list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Exit
+Enter your choice: 8

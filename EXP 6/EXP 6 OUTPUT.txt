@@ -1,0 +1,56 @@
+Menu:
+1. push
+2. pop
+3. peek
+4. display
+5. exit
+enter your choice : 1
+Enter the value to push: 10
+Menu:
+1. push
+2. pop
+3. peek
+4. display
+5. exit
+enter your choice : 1
+Enter the value to push: 20
+Menu:
+1. push
+2. pop
+3. peek
+4. display
+5. exit
+enter your choice : 1
+Enter the value to push: 30
+Menu:
+1. push
+2. pop
+3. peek
+4. display
+5. exit
+enter your choice : 2
+Popped value: 30
+Menu:
+1. push
+2. pop
+3. peek
+4. display
+5. exit
+enter your choice : 3
+Top value : 20
+Menu:
+1. push
+2. pop
+3. peek
+4. display
+5. exit
+enter your choice : 4
+20->10->NULL
+Menu:
+1. push
+2. pop
+3. peek
+4. display
+5. exit
+enter your choice : 5
+Exiting

@@ -1,0 +1,83 @@
+Enter choice:
+ 1.isFull
+ 2.isEmpty
+ 3.Enqueue
+ 4.Dequeue
+ 5.getFront
+ 6.getRear
+ 0.exit
+3
+enter value to be added to circular queue: 
+5
+Enter choice:
+ 1.isFull
+ 2.isEmpty
+ 3.Enqueue
+ 4.Dequeue
+ 5.getFront
+ 6.getRear
+ 0.exit
+3
+enter value to be added to circular queue: 
+6
+Enter choice:
+ 1.isFull
+ 2.isEmpty
+ 3.Enqueue
+ 4.Dequeue
+ 5.getFront
+ 6.getRear
+ 0.exit
+3
+enter value to be added to circular queue: 
+7
+Enter choice:
+ 1.isFull
+ 2.isEmpty
+ 3.Enqueue
+ 4.Dequeue
+ 5.getFront
+ 6.getRear
+ 0.exit
+4
+dequeued value is 5
+Enter choice:
+ 1.isFull
+ 2.isEmpty
+ 3.Enqueue
+ 4.Dequeue
+ 5.getFront
+ 6.getRear
+ 0.exit
+2
+queue is not empty
+Enter choice:
+ 1.isFull
+ 2.isEmpty
+ 3.Enqueue
+ 4.Dequeue
+ 5.getFront
+ 6.getRear
+ 0.exit
+1
+queue is not full
+Enter choice:
+ 1.isFull
+ 2.isEmpty
+ 3.Enqueue
+ 4.Dequeue
+ 5.getFront
+ 6.getRear
+ 0.exit
+5
+element at front of queue is 6
+Enter choice:
+ 1.isFull
+ 2.isEmpty
+ 3.Enqueue
+ 4.Dequeue
+ 5.getFront
+ 6.getRear
+ 0.exit
+6
+element at rear of queue is 7

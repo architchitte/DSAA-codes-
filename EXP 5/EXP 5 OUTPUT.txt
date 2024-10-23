@@ -1,0 +1,135 @@
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 1
+Enter data for node: 2
+Do you want to add more nodes? (y/n): y
+Enter data for node: 3
+Do you want to add more nodes? (y/n): y
+Enter data for node: 4
+Do you want to add more nodes? (y/n): n
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 3
+Enter data for node: 1
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 4
+Enter location to insert: 2
+Enter data for node: 2
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 5
+Enter data for node: 6
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 2
+1 -> 2 -> 2 -> 3 -> 4 -> 6 -> NULL
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 6
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 7
+Enter location to delete: 2
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 8
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 2
+2 -> 3 -> 4 -> NULL
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 9
+4 -> 3 -> 2 -> NULL
+1. Create list
+2. Display list
+3. Insert at beginning
+4. Insert in middle
+5. Insert at end
+6. Delete from beginning
+7. Delete from middle
+8. Delete from end
+9. Reverse list
+10. Exit
+Enter your choice: 10

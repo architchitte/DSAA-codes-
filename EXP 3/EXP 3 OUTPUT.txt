@@ -1,0 +1,75 @@
+enter choice of operation:
+ 1. Enqueue
+ 2. Dequeue
+ 3. Queue_Empty
+ 4. Queue_Full
+ 5. Get_front
+ 6. Get_rear
+1
+enter element to be inserted:
+ 20
+enter choice of operation:
+ 1. Enqueue
+ 2. Dequeue
+ 3. Queue_Empty
+ 4. Queue_Full
+ 5. Get_front
+ 6. Get_rear
+1
+enter element to be inserted:
+ 40
+enter choice of operation:
+ 1. Enqueue
+ 2. Dequeue
+ 3. Queue_Empty
+ 4. Queue_Full
+ 5. Get_front
+ 6. Get_rear
+1
+enter element to be inserted:
+ 80
+enter choice of operation:
+ 1. Enqueue
+ 2. Dequeue
+ 3. Queue_Empty
+ 4. Queue_Full
+ 5. Get_front
+ 6. Get_rear
+2
+Dequeued value is 20
+enter choice of operation:
+ 1. Enqueue
+ 2. Dequeue
+ 3. Queue_Empty
+ 4. Queue_Full
+ 5. Get_front
+ 6. Get_rear
+3
+Queue is not empty
+enter choice of operation:
+ 1. Enqueue
+ 2. Dequeue
+ 3. Queue_Empty
+ 4. Queue_Full
+ 5. Get_front
+ 6. Get_rear
+4
+Queue is not full
+enter choice of operation:
+ 1. Enqueue
+ 2. Dequeue
+ 3. Queue_Empty
+ 4. Queue_Full
+ 5. Get_front
+ 6. Get_rear
+5
+element at front of queue is 40
+enter choice of operation:
+ 1. Enqueue
+ 2. Dequeue
+ 3. Queue_Empty
+ 4. Queue_Full
+ 5. Get_front
+ 6. Get_rear
+6
+element at rear of queue is 80

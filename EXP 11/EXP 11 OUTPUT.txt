@@ -1,0 +1,28 @@
+Enter the number of vertices in the graph (<= 10): 3
+Enter the adjacency matrix (1 for edge, 0 for no edge):
+Edge from 0 to 0: 1
+Edge from 0 to 1: 1
+Edge from 0 to 2: 0
+Edge from 1 to 0: 1
+Edge from 1 to 1: 0
+Edge from 1 to 2: 1
+Edge from 2 to 0: 1
+Edge from 2 to 1: 0
+Edge from 2 to 2: 0
+
+Menu:
+1. BFS
+2. DFS
+3. Exit
+Enter your choice: 1
+Enter the starting vertex for BFS (0-2): 0
+BFS Traversal starting from vertex 0: 0 1 2 
+
+Menu:
+1. BFS
+2. DFS
+3. Exit
+Enter your choice: 2
+Enter the starting vertex for DFS (0-2): 0
+DFS Traversal starting from vertex 0: 0 1 2
+

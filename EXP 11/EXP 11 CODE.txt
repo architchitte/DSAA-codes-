@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 10  
+int adjMatrix[MAX][MAX]; 
+int visited[MAX];        
+void createGraph(int vertices);
+void bfs(int start, int vertices);
+void dfs(int start, int vertices);
+void createGraph(int vertices) {
+    int i, j;
+    printf("Enter the adjacency matrix (1 for edge, 0 for no edge):\n");
+    for (i = 0; i < vertices; i++) {
+        for (j = 0; j < vertices; j++) {
+            printf("Edge from %d to %d: ", i, j);
+            scanf("%d", &adjMatrix[i][j]);
+        }}}
+void bfs(int start, int vertices) {
+    int queue[MAX], front = -1, rear = -1;
+    int visited[MAX] = {0};  
+    int i;
+    printf("BFS Traversal starting from vertex %d: ", start);
+    rear++;
+    front++;
+    queue[rear] = start;
+    visited[start] = 1;
+    while (front <= rear) {
+        int current = queue[front++];
+        printf("%d ", current);
+        for (i = 0; i < vertices; i++) {
+            if (adjMatrix[current][i] == 1 && !visited[i]) {
+                queue[++rear] = i;
+                visited[i] = 1;
+            }}}
+    printf("\n");}
+void dfs(int start, int vertices) {
+    printf("%d ", start);
+    visited[start] = 1;
+    for (int i = 0; i < vertices; i++) {
+        if (adjMatrix[start][i] == 1 && !visited[i]) {
+            dfs(i, vertices);
+        }}}
+int main() {
+    int vertices, choice, startVertex;
+    printf("Enter the number of vertices in the graph (<= %d): ", MAX);
+    scanf("%d", &vertices);
+    if (vertices > MAX) {
+        printf("Number of vertices exceeds the limit.\n");
+        return 0;
+    }
+    createGraph(vertices);
+    do {
+        printf("\nMenu:\n");
+        printf("1. BFS\n");
+        printf("2. DFS\n");
+        printf("3. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:
+                printf("Enter the starting vertex for BFS (0-%d): ", vertices - 1);
+                scanf("%d", &startVertex);
+                bfs(startVertex, vertices);
+                break;
+            case 2:
+                printf("Enter the starting vertex for DFS (0-%d): ", vertices - 1);
+                scanf("%d", &startVertex);
+                // Reset visited array for DFS
+                for (int i = 0; i < vertices; i++) {
+                    visited[i] = 0;
+                }
+                printf("DFS Traversal starting from vertex %d: ", startVertex);
+                dfs(startVertex, vertices);
+                printf("\n");
+                break;
+            case 3:
+                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice!\n");
+        }
+    } while (choice != 3);
+    return 0;
+}

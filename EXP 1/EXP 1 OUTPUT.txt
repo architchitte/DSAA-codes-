@@ -1,0 +1,48 @@
+enter choice of operation:
+ 1. Push
+ 2. Pop
+ 3. stack_Top
+ 4. Stack_Empty
+ 5. Stack_Full
+ 1
+enter element to be inserted: 100
+enter choice of operation:
+ 1. Push
+ 2. Pop
+ 3. stack_Top
+ 4. Stack_Empty
+ 5. Stack_Full
+ 1
+enter element to be inserted: 200
+enter choice of operation:
+ 1. Push
+ 2. Pop
+ 3. stack_Top
+ 4. Stack_Empty
+ 5. Stack_Full
+ 2
+Popped element is 200
+enter choice of operation:
+ 1. Push
+ 2. Pop
+ 3. stack_Top
+ 4. Stack_Empty
+ 5. Stack_Full
+ 3
+top element is 100
+enter choice of operation:
+ 1. Push
+ 2. Pop
+ 3. stack_Top
+ 4. Stack_Empty
+ 5. Stack_Full
+ 4
+stack is not empty
+enter choice of operation:
+ 1. Push
+ 2. Pop
+ 3. stack_Top
+ 4. Stack_Empty
+ 5. Stack_Full
+ 5
+stack is not full

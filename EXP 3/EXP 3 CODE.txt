@@ -1,0 +1,116 @@
+#include <stdio.h>
+#include<stdbool.h>
+#define max_size 10
+int queue[max_size];
+int front=-1;
+int rear=-1;
+void enqueue(int x);
+int dequeue();
+bool isEmpty(int queue[]);
+bool isFull(int queue[]);
+int getfront(int queue[]);
+int getrear(int queue[]);
+void enqueue(int x){
+    if (rear==max_size-1){
+        printf("Queue is full!\n");
+    }
+    else if(front==-1 && rear==-1){
+        front=rear=0;
+        queue[rear]=x;
+    }
+    else{
+        rear++;
+        queue[rear]=x;
+        
+    }
+}
+int dequeue(){
+    int data;
+    if (front==-1 && rear==-1){
+        printf("Queue is empty\n");
+    }
+    else if (front==rear){
+        data=queue[front];
+        front=rear=-1;
+        return data;
+    }
+    else{
+        data=queue[front];
+        front++;
+        return data;
+    }
+}
+bool isEmpty(int queue[]){
+    if (front==-1 && rear==-1){
+        return true;
+    }
+    return false;
+}
+bool isFull(int queue[]){
+    if (rear==max_size-1){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+int getfront(int queue[]){
+    if (front==-1 && rear==-1){
+        printf("Queue is empty\n");
+    }
+    else{
+        return queue[front];
+    }
+}
+int getrear(int queue[]){
+    if (front==-1 && rear==-1){
+        printf("Queue is empty\n");
+    }
+    else{
+        return queue[rear];
+    }
+}
+int main(){
+    int choice,x,y,a,b;
+    do{
+        printf("enter choice of operation:\n 1. Enqueue\n 2. Dequeue\n 3. Queue_Empty\n 4. Queue_Full\n 5. Get_front\n 6. Get_rear\n");
+        scanf("%d",&choice);
+        switch (choice){
+            case 1:
+              printf("enter element to be inserted:\n ");
+              scanf("%d",&x);
+              enqueue(x);
+              break;
+            case 2:
+              y=dequeue();
+              printf("Dequeued value is %d\n",y);
+              break;
+            case 3:
+              if (isEmpty(queue)){
+                  printf("Queue is empty\n");
+              }
+              else{
+                  printf("Queue is not empty\n");
+              }
+              break;
+            case 4:
+              if(isFull(queue)){
+                  printf("Queue is full\n");
+              }
+              else{
+                  printf("Queue is not full\n");
+              }
+              break;
+            case 5:
+              a=getfront(queue);
+              printf("element at front of queue is %d\n",a);
+              break;
+            case 6:
+              b=getrear(queue);
+              printf("element at rear of queue is %d\n",b);
+              break;
+        }
+    }
+    while(choice!=0);
+    return 0;
+}

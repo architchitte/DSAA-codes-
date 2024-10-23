@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+typedef struct {
+    int id;
+    char name[50];
+} Employee;
+int binary_search(Employee employees[], int size, int target_id) {
+    int left = 0, right = size - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (employees[mid].id == target_id) {
+            return mid;  }
+    if (employees[mid].id < target_id) {
+            left = mid + 1; }
+        else {
+            right = mid - 1;
+        } }
+    return -1; }
+int main() {
+    Employee employees[] = {
+        {101, "Alice Johnson"},
+        {104, "Bob Smith"},
+        {109, "Charlie Brown"},
+        {115, "Diana Adams"},
+        {120, "Edward Kim"} };
+    int size = sizeof(employees) / sizeof(employees[0]);
+    int target_id;
+    printf("Enter employee ID to search: ");
+    scanf("%d", &target_id);
+    int result = binary_search(employees, size, target_id);
+    if (result != -1) {
+        printf("Employee found: ID = %d, Name = %s\n", employees[result].id, employees[result].name);
+    } else {
+        printf("Employee with ID %d not found.\n", target_id);}
+    return 0;}

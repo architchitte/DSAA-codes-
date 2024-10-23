@@ -1,0 +1,115 @@
+#include<stdio.h>
+#include<stdbool.h>
+#define max 10
+int front=-1;
+int rear=-1;
+int cqueue[max];
+bool isFull(int cqueue[]);
+bool isEmpty(int cqueue[]);
+void enqueue(int cqueue[],int value);
+int dequeue(int cqueue[]);
+int getFront(int cqueue[]);
+int getRear(int cqueue[]);
+
+bool isFull(int cqueue[]){
+    if ((rear+1)%max==front){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+bool isEmpty(int cqueue[]){
+    if (front==-1 && rear==-1){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+void enqueue(int cqueue[],int value){
+    if ((rear+1)%max==front){
+        printf("Queue is full\n");
+    }
+    else if (front==-1 && rear==-1){
+        front=rear=0;
+        
+    }
+    else{
+        rear=(rear+1) % max;
+        
+    }
+    
+    cqueue[rear]=value;
+    
+}
+int dequeue(int cqueue[]){
+    if (front==-1 && rear==-1){
+        printf("Queue is empty\n");
+    }
+    else if(front==rear){
+        int data=cqueue[front];
+        front=rear=-1;
+        return data;
+    }
+    else{
+        int data=cqueue[front];
+        front=(front+1) %max;
+        return data;
+    }
+    
+}
+int getFront(int cqueue[]){
+    if (front==-1 && rear==-1){
+        printf("Queue is empty\n");
+    }
+    else{
+        return cqueue[front]; }
+}
+int getRear(int cqueue[]){
+    if (front==-1 && rear==-1){
+        printf("Queue is empty\n");
+    }
+    else{
+        return cqueue[rear];}
+}
+int main(){
+    int choice,value;
+    do{
+        printf("Enter choice:\n 1.isFull\n 2.isEmpty\n 3.Enqueue\n 4.Dequeue\n 5.getFront\n 6.getRear\n 0.exit\n");
+        scanf("%d",&choice);
+        switch(choice){
+            case 1:
+               if (isFull(cqueue)){
+                   printf("queue is full\n");}
+               else{
+                   printf("queue is not full\n");}
+               break;
+            case 2:
+               if (isEmpty(cqueue)){
+                   printf("queue is empty\n");
+               }
+               else{
+                   printf("queue is not empty\n");
+               }
+               break;
+            case 3:
+                printf("enter value to be added to circular queue: \n");
+                scanf("%d",&value);
+                enqueue(cqueue,value);
+                break;
+            case 4:
+                int num=dequeue(cqueue);
+                printf("dequeued value is %d\n",num);
+                break;
+            case 5:
+               int f=getFront(cqueue);
+               printf("element at front of queue is %d\n",f);
+               break;
+            case 6:
+               int r=getRear(cqueue);
+               printf("element at rear of queue is %d\n",r);
+               break;}
+    }
+    while(choice!=0);
+    return 0;}
